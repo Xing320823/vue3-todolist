@@ -1,0 +1,48 @@
+@import './base.css';
+
+#app {
+  font-weight: normal;
+  background: linear-gradient(to bottom, #b4bfdc, #6682c1);
+}
+
+.todo-container {
+  min-height: 100vh;
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+.todo-header h2 {
+  margin: 0  auto;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.todo-list {
+  margin: 1rem 0;
+}
+
+.empty {
+  color: #fff;
+}
+
+.todo-card {
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  border: 1px solid #e0e0e0;
+}
+
+.add-form {
+  padding: 18px;
+  padding-bottom: 0;
+}
