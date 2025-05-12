@@ -1,4 +1,4 @@
-# todolist app
+# Todolist app
 
 A Vue 3 pet project implementing a simple Todo List to explore the framework’s core features:
 - reactivity,
