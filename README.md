@@ -25,3 +25,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Live Demo
+
+Try it out: https://taova.github.io/vue3-todolist/
