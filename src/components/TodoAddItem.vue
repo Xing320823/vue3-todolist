@@ -25,9 +25,11 @@
 
 <script setup lang="ts">
   import { reactive, ref } from "vue";
+  import { ElForm } from 'element-plus';  // 引入 ElForm 类型
 
-  const form = reactive({ name: '' });
-  const formRef = ref(null);
+  const form = reactive<{ name: string }>({ name: '' });
+  const formRef = ref<InstanceType<typeof ElForm> | null>(null);  // 使用 InstanceType
+
   const emit = defineEmits<(e: 'add-item', name: string) => void>();
 
   const rules = {
@@ -37,14 +39,16 @@
   };
 
   function handleSubmit() {
-    formRef.value.validate(valid => {
+    if (!formRef.value) return;  // Ensure formRef is not null before proceeding
+
+    formRef.value?.validate((valid: boolean) => {  // Safely call validate with optional chaining
       if (!valid) return;
 
       emit('add-item', form.name);
 
       form.name = '';
 
-      formRef.value.clearValidate();
+      formRef.value?.clearValidate();  // Safely call clearValidate with optional chaining
     });
   }
 </script>
